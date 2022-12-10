@@ -1,5 +1,6 @@
 <head>
-<title>{{ .Site.Title }} - {{ .Title  }}</title>
+<!-- <title>{{ .Site.Title }} - {{ .Title  }}</title> -->
+<title>{{ if .IsHome }}Home - {{ else }}{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description"
